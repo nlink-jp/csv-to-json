@@ -7,13 +7,12 @@ A simple, fast, and cross-platform CLI tool to convert CSV data to JSON, written
 - Convert CSV to a JSON array.
 - Reads from a file or `stdin`.
 - Single binary, no external dependencies.
-- Cross-platform support (macOS, Windows, Linux).
-- macOS Universal Binary available.
+- Cross-platform support (macOS amd64/arm64, Linux amd64/arm64, Windows amd64).
 
 ## Installation
 
-1.  Go to the [Releases page](https://github.com/magifd2/csv-to-json/releases) (once the repository is public).
-2.  Download the appropriate archive for your operating system and architecture (e.g., `csv-to-json_v1.0.0_darwin_universal.tar.gz`).
+1.  Go to the [Releases page](https://github.com/nlink-jp/csv-to-json/releases).
+2.  Download the appropriate archive for your operating system and architecture (e.g., `csv-to-json-v1.0.2-darwin-arm64.zip`).
 3.  Extract the archive.
 4.  Move the `csv-to-json` binary to a directory in your `$PATH` (e.g., `/usr/local/bin` on macOS/Linux).
 
@@ -57,7 +56,7 @@ cat data.csv | csv-to-json > output.json
 1.  Clone the repository:
 
     ```sh
-    git clone https://github.com/magifd2/csv-to-json.git
+    git clone https://github.com/nlink-jp/csv-to-json.git
     cd csv-to-json
     ```
 
@@ -70,11 +69,11 @@ cat data.csv | csv-to-json > output.json
 3.  Run `make` to build binaries and archives:
 
     ```sh
-    # Build all platform binaries and create release archives
-    make release
+    # Cross-compile for all platforms and create .zip archives
+    make package
 
     # Or, to build just for your local machine
     make build
     ```
 
-    The build artifacts will be located in the `bin/` directory.
+    The build artifacts will be located in the `dist/` directory.
