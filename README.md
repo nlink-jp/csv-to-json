@@ -43,7 +43,7 @@ cat data.csv | csv-to-json > output.json
     csv-to-json version v0.1.0 
     ```
 
-## Build From Source
+## Building
 
 ### Prerequisites
 

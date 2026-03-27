@@ -44,7 +44,7 @@ cat data.csv | csv-to-json > output.json
     csv-to-json version v0.1.0 
     ```
 
-## ソースからビルド
+## ビルド
 
 ### 必要なもの
 
