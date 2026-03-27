@@ -8,12 +8,12 @@ Goで書かれた、シンプルで高速なクロスプラットフォーム対
 - ファイルまたは標準入力（`stdin`）からデータを読み込みます。
 - 外部依存のないシングルバイナリとして動作します。
 - クロスプラットフォーム対応（macOS, Windows, Linux）。
-- macOS ユニバーサルバイナリも提供します。
+- macOS amd64/arm64、Linux amd64/arm64、Windows amd64 向けのバイナリを提供します。
 
 ## インストール
 
-1.  [リリースページ](https://github.com/magifd2/csv-to-json/releases)（リポジトリが公開された後）にアクセスします。
-2.  お使いのOSとアーキテクチャに合ったアーカイブをダウンロードします。（例: `csv-to-json_v1.0.0_darwin_universal.tar.gz`）
+1.  [リリースページ](https://github.com/nlink-jp/csv-to-json/releases)にアクセスします。
+2.  お使いのOSとアーキテクチャに合ったアーカイブをダウンロードします。（例: `csv-to-json-v1.0.2-darwin-arm64.zip`）
 3.  アーカイブを展開します。
 4.  `csv-to-json` バイナリをPATHの通ったディレクトリに移動します。（例: macOS/Linuxでは `/usr/local/bin`）
 
@@ -57,7 +57,7 @@ cat data.csv | csv-to-json > output.json
 1.  リポジトリをクローンします。
 
     ```sh
-    git clone https://github.com/magifd2/csv-to-json.git
+    git clone https://github.com/nlink-jp/csv-to-json.git
     cd csv-to-json
     ```
 
@@ -70,11 +70,11 @@ cat data.csv | csv-to-json > output.json
 3.  `make` を実行してバイナリとアーカイブをビルドします。
 
     ```sh
-    # 全プラットフォーム向けのバイナリをビルドし、配布用アーカイブを作成
-    make release
+    # 全プラットフォーム向けのバイナリをビルドし、配布用 .zip アーカイブを作成
+    make package
 
     # もしくは、現在使用中のマシン向けのみビルド
     make build
     ```
 
-    ビルド成果物は `bin/` ディレクトリ以下に生成されます。
+    ビルド成果物は `dist/` ディレクトリ以下に生成されます。
