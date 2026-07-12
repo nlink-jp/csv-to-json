@@ -69,7 +69,7 @@ cat data.csv | csv-to-json > output.json
 3.  Run `make` to build binaries and archives:
 
     ```sh
-    # Cross-compile for all platforms and create .zip archives
+    # Cross-compile release platforms and create archives (zip; linux .tar.gz)
     make package
 
     # Or, to build just for your local machine
