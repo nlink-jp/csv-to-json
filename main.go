@@ -33,7 +33,7 @@ func main() {
 		if err != nil {
 			log.Fatalf("Error opening file: %v", err)
 		}
-		defer file.Close()
+		defer func() { _ = file.Close() }()
 		reader = file
 	} else {
 		// Check if there is data on stdin
